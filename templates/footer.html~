@@ -1,0 +1,20 @@
+<hr>
+
+<table id="menu">
+        <tr>
+            <td>
+<form action="/" method="GET"><input type="submit" value="Resultado"></form>
+	    </td>
+            <td>
+<form action="/l" method="GET"><input type="submit" value="Advers"></form>
+	    </td>
+            <td>
+<form action="/l2" method="GET"><input type="submit" value="Historico"></form>
+	    </td>
+        </tr>
+</table>
+
+
+</body>
+</html>
+

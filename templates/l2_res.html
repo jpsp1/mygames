@@ -1,0 +1,13 @@
+$def with (header,footer,u_reg,results)
+
+$:header
+
+<p>res jog nr. $:u_reg</p>
+<ul>
+$for i in results:
+   <li>A/M/D=$i.data_ano/$i.data_mes/$i.data_dia;parciais=$i.Set01_eu/$i.Set01_adv,$i.Set02_eu/$i.Set02_adv,$i.Set03_eu/$i.Set03_adv;$i.res_desc;$i.h_analise_adv;$i.h_tatica</li>
+
+</ul>
+
+$:footer
+

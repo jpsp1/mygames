@@ -1,0 +1,268 @@
+$def with (header,footer,now_str,data_dia_selected,data_mes_selected,data_ano_selected,data_hora_selected)
+$:header
+
+
+<p>Data atual=$:now_str</p>
+
+<form action="/" method="POST">
+
+<ul>
+
+  <input name="auth" value="descontinuado" type="hidden" />
+
+
+	<li>advers&aacute;rio registado (número): <input name="u_reg" size="15" type="text" />
+	</li>
+
+	<li>advers&aacute;rio n&atilde;o registado (nome): <input name="u_nreg" size="15" type="text" />
+	</li>
+
+	<li>local registado (número): <input name="l_reg" size="15" type="text" />
+	</li>
+
+	<li>local n&atilde;o registado (nome): <input name="l_nreg" size="15" type="text" />
+	</li>
+
+
+	<li>data: &nbsp; 
+	  <select name="data_dia">
+<option value="1" $:data_dia_selected[0] >1</option>
+<option value="2" $:data_dia_selected[1] >2</option>
+<option value="3" $:data_dia_selected[2] >3</option>
+<option value="4" $:data_dia_selected[3] >4</option>
+<option value="5" $:data_dia_selected[4] >5</option>
+<option value="6" $:data_dia_selected[5] >6</option>
+<option value="7" $:data_dia_selected[6] >7</option>
+<option value="8" $:data_dia_selected[7] >8</option>
+<option value="9" $:data_dia_selected[8] >9</option>
+<option value="10" $:data_dia_selected[9] >10</option>
+<option value="11" $:data_dia_selected[10] >11</option>
+<option value="12" $:data_dia_selected[11] >12</option>
+<option value="13" $:data_dia_selected[12] >13</option>
+<option value="14" $:data_dia_selected[13] >14</option>
+<option value="15" $:data_dia_selected[14] >15</option>
+<option value="16" $:data_dia_selected[15] >16</option>
+<option value="17" $:data_dia_selected[16] >17</option>
+<option value="18" $:data_dia_selected[17] >18</option>
+<option value="19" $:data_dia_selected[18] >19</option>
+<option value="20" $:data_dia_selected[19] >20</option>
+<option value="21" $:data_dia_selected[20] >21</option>
+<option value="22" $:data_dia_selected[21] >22</option>
+<option value="23" $:data_dia_selected[22] >23</option>
+<option value="24" $:data_dia_selected[23] >24</option>
+<option value="25" $:data_dia_selected[24] >25</option>
+<option value="26" $:data_dia_selected[25] >26</option>
+<option value="27" $:data_dia_selected[26] >27</option>
+<option value="28" $:data_dia_selected[27] >28</option>
+<option value="29" $:data_dia_selected[28] >29</option>
+<option value="30" $:data_dia_selected[29] >30</option>
+<option value="31" $:data_dia_selected[30] >31</option>
+	  </select>  
+	  de 
+	  <select name="data_mes" id="data_mes" >
+<option  value="1"      $:data_mes_selected[0]      >Jan</option>
+<option  value="2"      $:data_mes_selected[1]      >Fev</option>
+<option  value="3"      $:data_mes_selected[2]      >Mar</option>
+<option  value="4"      $:data_mes_selected[3]      >Abr</option>
+<option  value="5"      $:data_mes_selected[4]      >Mai</option>
+<option  value="6"      $:data_mes_selected[5]      >Jun</option>
+<option  value="7"      $:data_mes_selected[6]      >Jul</option>
+<option  value="8"      $:data_mes_selected[7]      >Ago</option>
+<option  value="9"      $:data_mes_selected[8]      >Set</option>
+<option  value="10"      $:data_mes_selected[9]      >Out</option>
+<option  value="11"      $:data_mes_selected[10]      >Nov</option>
+<option  value="12"      $:data_mes_selected[11]      >Dez</option>
+	  </select> 
+	  de
+	  <select name="data_ano" id="data_ano">
+<option value="2005" $:data_ano_selected[0]>2005</option>
+<option value="2006" $:data_ano_selected[1]>2006</option>
+<option value="2007" $:data_ano_selected[2]>2007</option>
+<option value="2008" $:data_ano_selected[3]>2008</option>
+<option value="2009" $:data_ano_selected[4]>2009</option>
+<option value="2010" $:data_ano_selected[5]>2010</option>
+<option value="2011" $:data_ano_selected[6]>2011</option>
+<option value="2012" $:data_ano_selected[7]>2012</option>
+<option value="2013" $:data_ano_selected[8]>2013</option>
+<option value="2014" $:data_ano_selected[9]>2014</option>
+<option value="2015" $:data_ano_selected[10]>2015</option>
+<option value="2016" $:data_ano_selected[11]>2016</option>
+<option value="2017" $:data_ano_selected[12]>2017</option>
+<option value="2018" $:data_ano_selected[13]>2018</option>
+<option value="2019" $:data_ano_selected[14]>2019</option>
+<option value="2020" $:data_ano_selected[15]>2020</option>
+<option value="2021" $:data_ano_selected[16]>2021</option>
+<option value="2022" $:data_ano_selected[17]>2022</option>
+	  </select> 
+	</li>
+	<li>hora:&nbsp; 
+	  <select name="hora_hora" id="hora_hora">
+<option value="0" $:data_hora_selected[0] >0H</option>
+<option value="1" $:data_hora_selected[1] >1H</option>
+<option value="2" $:data_hora_selected[2] >2H</option>
+<option value="3" $:data_hora_selected[3] >3H</option>
+<option value="4" $:data_hora_selected[4] >4H</option>
+<option value="5" $:data_hora_selected[5] >5H</option>
+<option value="6" $:data_hora_selected[6] >6H</option>
+<option value="7" $:data_hora_selected[7] >7H</option>
+<option value="8" $:data_hora_selected[8] >8H</option>
+<option value="9" $:data_hora_selected[9] >9H</option>
+<option value="10" $:data_hora_selected[10] >10H</option>
+<option value="11" $:data_hora_selected[11] >11H</option>
+<option value="12" $:data_hora_selected[12] >12H</option>
+<option value="13" $:data_hora_selected[13] >13H</option>
+<option value="14" $:data_hora_selected[14] >14H</option>
+<option value="15" $:data_hora_selected[15] >15H</option>
+<option value="16" $:data_hora_selected[16] >16H</option>
+<option value="17" $:data_hora_selected[17] >17H</option>
+<option value="18" $:data_hora_selected[18] >18H</option>
+<option value="19" $:data_hora_selected[19] >19H</option>
+<option value="20" $:data_hora_selected[20] >20H</option>
+<option value="21" $:data_hora_selected[21] >21H</option>
+<option value="22" $:data_hora_selected[22] >22H</option>
+<option value="23" $:data_hora_selected[23] >23H</option>
+	  </select> 
+	  <select name="hora_minuto" id="hora_minuto">
+<option value="0" selected>0M</option>
+<option value="15">15M</option>
+<option value="30">30M</option>
+<option value="45">45M</option>
+	  </select> 
+	</li>
+	<li>Resultado: 
+	  <select name="resultado" id="resultado">
+<option value="1" selected>Ganhei</option>
+<option value="2">Perdi</option>
+<option value="3">Suspenso</option>
+<option value="4">Desisti</option>
+<option value="5">Adv. Desistiu</option>
+<option value="6">Cancelado</option>
+	  </select>
+	</li>
+	<li>Parciais: 
+	  1&ordm:
+	  <select name="Set01_eu">
+<option  value="0" selected>0</option>
+<option  value="1">1</option>
+<option  value="2">2</option>
+<option  value="3">3</option>
+<option  value="4">4</option>
+<option  value="5">5</option>
+<option  value="6">6</option>
+<option  value="7">7</option>
+<option  value="8">8</option>
+<option  value="9">9</option>
+<option  value="10">10</option>
+<option  value="11">11</option>
+<option  value="12">12</option>
+<option  value="13">13</option>
+<option  value="14">14</option>
+<option  value="15">15</option>
+
+	  </select>
+	  /
+	  <select name="Set01_adv">
+<option  value="0" selected>0</option>
+<option  value="1">1</option>
+<option  value="2">2</option>
+<option  value="3">3</option>
+<option  value="4">4</option>
+<option  value="5">5</option>
+<option  value="6">6</option>
+<option  value="7">7</option>
+<option  value="8">8</option>
+<option  value="9">9</option>
+<option  value="10">10</option>
+<option  value="11">11</option>
+<option  value="12">12</option>
+<option  value="13">13</option>
+<option  value="14">14</option>
+<option  value="15">15</option>
+	  </select>
+	  ; 2&ordm:	  
+	  <select name="Set02_eu">
+<option  value="0" selected>0</option>
+<option  value="1">1</option>
+<option  value="2">2</option>
+<option  value="3">3</option>
+<option  value="4">4</option>
+<option  value="5">5</option>
+<option  value="6">6</option>
+<option  value="7">7</option>
+<option  value="8">8</option>
+<option  value="9">9</option>
+<option  value="10">10</option>
+<option  value="11">11</option>
+<option  value="12">12</option>
+<option  value="13">13</option>
+<option  value="14">14</option>
+<option  value="15">15</option>
+	  </select>
+	  /
+	  <select name="Set02_adv">
+<option  value="0" selected>0</option>
+<option  value="1">1</option>
+<option  value="2">2</option>
+<option  value="3">3</option>
+<option  value="4">4</option>
+<option  value="5">5</option>
+<option  value="6">6</option>
+<option  value="7">7</option>
+<option  value="8">8</option>
+<option  value="9">9</option>
+<option  value="10">10</option>
+<option  value="11">11</option>
+<option  value="12">12</option>
+<option  value="13">13</option>
+<option  value="14">14</option>
+<option  value="15">15</option>
+	  </select>
+	  ; 3&ordm:	  
+	  <select name="Set03_eu">
+<option  value="0" selected>0</option>
+<option  value="1">1</option>
+<option  value="2">2</option>
+<option  value="3">3</option>
+<option  value="4">4</option>
+<option  value="5">5</option>
+<option  value="6">6</option>
+<option  value="7">7</option>
+<option  value="8">8</option>
+<option  value="9">9</option>
+<option  value="10">10</option>
+<option  value="11">11</option>
+<option  value="12">12</option>
+<option  value="13">13</option>
+<option  value="14">14</option>
+<option  value="15">15</option>
+	  </select>
+	  /
+	  <select name="Set03_adv">
+<option  value="0" selected>0</option>
+<option  value="1">1</option>
+<option  value="2">2</option>
+<option  value="3">3</option>
+<option  value="4">4</option>
+<option  value="5">5</option>
+<option  value="6">6</option>
+<option  value="7">7</option>
+<option  value="8">8</option>
+<option  value="9">9</option>
+<option  value="10">10</option>
+<option  value="11">11</option>
+<option  value="12">12</option>
+<option  value="13">13</option>
+<option  value="14">14</option>
+<option  value="15">15</option>
+	  </select>
+
+	</li>
+	<li>resumo descritivo do jogo:</li>
+</ul>
+<p><textarea cols="40" name="res_desc" rows="10"></textarea></p>
+<input type="submit" value="Submeter">
+
+</form>
+$:footer
+
+

@@ -1,0 +1,25 @@
+$def with (session)
+
+<!--- __START_HEADER__ --->
+<html>
+    <head>
+        <title>My games records</title>
+    </head>
+<body>
+<!--- __END_HEADER__ --->
+
+
+<li>s_count=$session.count
+<li>s_login=$session.login
+<li>s_privilege=$session.privilege
+<li>s_user=$session.user
+<li>s_loggedin=$session.loggedin
+<!--- __START_FOOTER__ --->
+<hr>
+User:
+$session.user
+</body>
+</html>
+<!--- __END_FOOTER__ --->
+
+

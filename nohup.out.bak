@@ -1,0 +1,802 @@
+python: can't open file '/bin/app.py': [Errno 2] No such file or directory
+85.139.2.165:49371 - - [08/Sep/2015 19:56:39] "HTTP/1.1 GET /" - 200 OK
+85.139.2.165:49897 - - [08/Sep/2015 21:00:00] "HTTP/1.1 GET /l" - 404 Not Found
+85.139.2.165:49905 - - [08/Sep/2015 21:00:39] "HTTP/1.1 GET /l" - 200 OK
+85.139.2.165:50016 - - [08/Sep/2015 21:08:37] "HTTP/1.1 GET /" - 200 OK
+85.139.2.165:50016 - - [08/Sep/2015 21:08:42] "HTTP/1.1 GET /l" - 200 OK
+85.139.2.165:50021 - - [08/Sep/2015 21:10:16] "HTTP/1.1 GET /" - 200 OK
+85.139.2.165:50021 - - [08/Sep/2015 21:10:20] "HTTP/1.1 GET /l" - 200 OK
+85.139.2.165:50025 - - [08/Sep/2015 21:10:44] "HTTP/1.1 GET /l" - 200 OK
+85.139.2.165:50025 - - [08/Sep/2015 21:10:46] "HTTP/1.1 GET /l" - 200 OK
+85.139.2.165:50026 - - [08/Sep/2015 21:11:02] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:50796 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:50797 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:50797 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:50797 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:50797 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:50797 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:50797 - - [09/Sep/2015 08:32:38] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:52226 - - [09/Sep/2015 08:39:20] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:52226 - - [09/Sep/2015 08:39:20] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:52229 - - [09/Sep/2015 08:40:03] "HTTP/1.1 GET /" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 408, in _delegate
+    cls = fvars[f]
+KeyError: u'Listagem02'
+
+193.136.44.30:52229 - - [09/Sep/2015 08:40:05] "HTTP/1.1 GET /l2" - 500 Internal Server Error
+193.136.44.30:49912 - - [09/Sep/2015 08:41:01] "HTTP/1.1 GET /" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 205, in GET
+    return render.l2()
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+TypeError: __template__() takes exactly 5 arguments (0 given)
+
+193.136.44.30:49912 - - [09/Sep/2015 08:41:02] "HTTP/1.1 GET /l2" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 205, in GET
+    return render.l2()
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+TypeError: __template__() takes exactly 5 arguments (0 given)
+
+193.136.44.30:49912 - - [09/Sep/2015 08:41:04] "HTTP/1.1 GET /l2" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 205, in GET
+    return render.l2()
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 1009, in __getattr__
+    t = self._template(name)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 1003, in _template
+    self._cache[name] = self._load_template(name)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 991, in _load_template
+    return Template(open(path).read(), filename=path, **self._keywords)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 844, in __init__
+    code = self.compile_template(text, filename)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 910, in compile_template
+    compiled_code = compile(code, filename, 'exec')
+  File "templates/l2.html", line 6
+    extend_([u'#', escape_(def, True), u' with (now_str,data_dia_selected,data_mes_selected,data_ano_selected,data_hora_selected)\n'])
+                             ^
+SyntaxError: invalid syntax
+
+193.136.44.30:49918 - - [09/Sep/2015 08:41:45] "HTTP/1.1 GET /l2" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 205, in GET
+    return render.l2()
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+  File "templates/l2.html", line 16, in __template__
+    <li>auth: <input name="auth" size="6" type="text" />
+NameError: global name 'now_str' is not defined
+
+193.136.44.30:49919 - - [09/Sep/2015 08:42:20] "HTTP/1.1 GET /l2" - 500 Internal Server Error
+193.136.44.30:49921 - - [09/Sep/2015 08:43:07] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:49926 - - [09/Sep/2015 08:44:47] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:52089 - - [09/Sep/2015 08:46:53] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52089 - - [09/Sep/2015 08:46:57] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52128 - - [09/Sep/2015 08:51:12] "HTTP/1.1 POST /l2" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 221, in POST
+    return "OK:" + len(q)
+TypeError: cannot concatenate 'str' and 'int' objects
+
+193.136.44.30:52163 - - [09/Sep/2015 08:52:21] "HTTP/1.1 POST /l2" - 500 Internal Server Error
+193.136.44.30:52164 - - [09/Sep/2015 08:52:58] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52164 - - [09/Sep/2015 08:53:04] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52164 - - [09/Sep/2015 08:53:11] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52164 - - [09/Sep/2015 08:53:15] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52164 - - [09/Sep/2015 08:53:25] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52235 - - [09/Sep/2015 08:55:37] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52235 - - [09/Sep/2015 08:55:44] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52279 - - [09/Sep/2015 08:57:58] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52279 - - [09/Sep/2015 08:58:01] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52279 - - [09/Sep/2015 08:58:05] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52279 - - [09/Sep/2015 08:58:14] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:52279 - - [09/Sep/2015 08:58:16] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:52280 - - [09/Sep/2015 08:58:28] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52333 - - [09/Sep/2015 09:07:17] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52342 - - [09/Sep/2015 09:08:38] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52344 - - [09/Sep/2015 09:09:18] "HTTP/1.1 POST /l2" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 224, in POST
+    order='id',
+  File "/usr/lib/python2.6/site-packages/web/db.py", line 671, in select
+    clauses = [self.gen_clause(sql, val, vars) for sql, val in sql_clauses if val is not None]
+  File "/usr/lib/python2.6/site-packages/web/db.py", line 716, in gen_clause
+    nout = reparam(val, vars)
+  File "/usr/lib/python2.6/site-packages/web/db.py", line 303, in reparam
+    v = eval(chunk, dictionary)
+  File "<string>", line 1, in <module>
+NameError: name 'u_reg' is not defined
+
+193.136.44.30:52441 - - [09/Sep/2015 09:14:50] "HTTP/1.1 POST /l2" - 500 Internal Server Error
+  File "bin/app.py", line 226
+    )
+    ^
+IndentationError: unexpected indent
+193.136.44.30:52448 - - [09/Sep/2015 09:17:51] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52452 - - [09/Sep/2015 09:19:40] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:52452 - - [09/Sep/2015 09:19:44] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:52452 - - [09/Sep/2015 09:19:48] "HTTP/1.1 GET /l" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 227, in POST
+    return render.index_l2(results)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 1009, in __getattr__
+    t = self._template(name)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 1003, in _template
+    self._cache[name] = self._load_template(name)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 993, in _load_template
+    raise AttributeError, "No template named " + name
+AttributeError: No template named index_l2
+
+193.136.44.30:52463 - - [09/Sep/2015 09:22:24] "HTTP/1.1 POST /l2" - 500 Internal Server Error
+193.136.44.30:52464 - - [09/Sep/2015 09:23:05] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52484 - - [09/Sep/2015 09:26:04] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52490 - - [09/Sep/2015 09:27:01] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52492 - - [09/Sep/2015 09:27:43] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52493 - - [09/Sep/2015 09:27:56] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:52494 - - [09/Sep/2015 09:28:09] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:52495 - - [09/Sep/2015 09:28:59] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:57911 - - [09/Sep/2015 09:32:52] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:57922 - - [09/Sep/2015 09:36:11] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:57923 - - [09/Sep/2015 09:36:56] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:57930 - - [09/Sep/2015 09:37:07] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:57931 - - [09/Sep/2015 09:38:04] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:57931 - - [09/Sep/2015 09:38:10] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:59944 - - [09/Sep/2015 09:40:15] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:59946 - - [09/Sep/2015 09:40:25] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:50913 - - [09/Sep/2015 09:40:44] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:50915 - - [09/Sep/2015 09:40:45] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:50915 - - [09/Sep/2015 09:40:45] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:50915 - - [09/Sep/2015 09:40:45] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:50915 - - [09/Sep/2015 09:40:45] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:50915 - - [09/Sep/2015 09:40:45] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:50915 - - [09/Sep/2015 09:40:45] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:50913 - - [09/Sep/2015 09:40:53] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:50922 - - [09/Sep/2015 09:41:08] "HTTP/1.1 GET /l2" - 200 OK
+193.136.46.104:50923 - - [09/Sep/2015 09:41:23] "HTTP/1.1 POST /l2" - 200 OK
+193.136.46.104:50933 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:50934 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:50934 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:50934 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:50934 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:50934 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:50934 - - [09/Sep/2015 09:42:22] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:59958 - - [09/Sep/2015 09:43:22] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:51430 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:51432 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:51432 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:51432 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51432 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51432 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:51432 - - [09/Sep/2015 15:02:46] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 105, in POST
+    hora_minuto=web.input().hora_minuto
+  File "/usr/lib/python2.6/site-packages/web/utils.py", line 76, in __getattr__
+    raise AttributeError, k
+AttributeError: 'hora_minuto'
+
+193.136.46.104:51456 - - [09/Sep/2015 15:07:29] "HTTP/1.1 POST /" - 500 Internal Server Error
+193.136.46.104:51457 - - [09/Sep/2015 15:07:29] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:51457 - - [09/Sep/2015 15:07:30] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:51457 - - [09/Sep/2015 15:07:30] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51457 - - [09/Sep/2015 15:07:30] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51457 - - [09/Sep/2015 15:07:30] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:51457 - - [09/Sep/2015 15:07:30] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:51462 - - [09/Sep/2015 15:12:54] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:51462 - - [09/Sep/2015 15:12:54] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:51462 - - [09/Sep/2015 15:12:54] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51462 - - [09/Sep/2015 15:12:54] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51462 - - [09/Sep/2015 15:12:54] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:51462 - - [09/Sep/2015 15:12:54] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+193.136.46.104:51467 - - [09/Sep/2015 15:14:00] "HTTP/1.1 POST /" - 200 OK
+193.136.46.104:51468 - - [09/Sep/2015 15:14:00] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:51468 - - [09/Sep/2015 15:14:00] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:51468 - - [09/Sep/2015 15:14:00] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51468 - - [09/Sep/2015 15:14:01] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51468 - - [09/Sep/2015 15:14:01] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:51468 - - [09/Sep/2015 15:14:01] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:51476 - - [09/Sep/2015 15:15:11] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:51477 - - [09/Sep/2015 15:15:12] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:51477 - - [09/Sep/2015 15:15:12] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:51477 - - [09/Sep/2015 15:15:12] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51477 - - [09/Sep/2015 15:15:12] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51477 - - [09/Sep/2015 15:15:12] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:51477 - - [09/Sep/2015 15:15:12] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:51483 - - [09/Sep/2015 15:21:25] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:51484 - - [09/Sep/2015 15:21:54] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:51485 - - [09/Sep/2015 15:21:55] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:51485 - - [09/Sep/2015 15:21:55] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:51485 - - [09/Sep/2015 15:21:55] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51485 - - [09/Sep/2015 15:21:55] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:51485 - - [09/Sep/2015 15:21:55] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:51485 - - [09/Sep/2015 15:21:55] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:51486 - - [09/Sep/2015 15:22:39] "HTTP/1.1 GET /l2" - 200 OK
+193.136.46.104:51487 - - [09/Sep/2015 15:22:51] "HTTP/1.1 POST /l2" - 200 OK
+89.115.218.117:59389 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /" - 200 OK
+89.115.218.117:52434 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+89.115.218.117:52434 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+89.115.218.117:52434 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:52434 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:52434 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+89.115.218.117:52434 - - [10/Sep/2015 19:52:47] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+89.115.218.117:56527 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /" - 200 OK
+89.115.218.117:57070 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+89.115.218.117:57070 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+89.115.218.117:57070 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:57070 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:57070 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+89.115.218.117:57070 - - [11/Sep/2015 20:22:11] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 139, in POST
+    u_reg=corrige_int(u_reg)
+  File "bin/app.py", line 55, in corrige_int
+    nr=int(str_n)
+ValueError: invalid literal for int() with base 10: ''
+
+89.115.218.117:53700 - - [11/Sep/2015 20:24:55] "HTTP/1.1 POST /" - 500 Internal Server Error
+89.115.218.117:52228 - - [11/Sep/2015 20:24:55] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:24:55] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:24:55] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:24:55] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:24:55] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:24:56] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:25:00] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:25:01] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:25:01] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+89.115.218.117:52228 - - [11/Sep/2015 20:25:02] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.53.41:16453 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /" - 200 OK
+46.50.53.41:16580 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+46.50.53.41:16580 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+46.50.53.41:16580 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.53.41:16580 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.53.41:16580 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+46.50.53.41:16580 - - [12/Sep/2015 11:14:55] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+46.50.53.41:16395 - - [12/Sep/2015 11:15:02] "HTTP/1.1 GET /l" - 200 OK
+46.50.53.41:16583 - - [12/Sep/2015 11:15:10] "HTTP/1.1 GET /l2" - 200 OK
+46.50.53.41:16516 - - [12/Sep/2015 11:15:30] "HTTP/1.1 POST /l2" - 200 OK
+46.50.55.221:8610 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /" - 200 OK
+46.50.55.221:8673 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+46.50.55.221:8673 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+46.50.55.221:8673 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.55.221:8673 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.55.221:8673 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+46.50.55.221:8673 - - [13/Sep/2015 20:59:05] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+46.50.55.221:8455 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /" - 200 OK
+46.50.55.221:8520 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+46.50.55.221:8520 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+46.50.55.221:8520 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.55.221:8520 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.55.221:8520 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+46.50.55.221:8520 - - [13/Sep/2015 21:01:29] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:56450 - - [14/Sep/2015 09:16:40] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56450 - - [14/Sep/2015 09:16:40] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:56453 - - [14/Sep/2015 09:17:41] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56461 - - [14/Sep/2015 09:18:09] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:62355 - - [14/Sep/2015 09:31:15] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:62356 - - [14/Sep/2015 09:31:16] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:62356 - - [14/Sep/2015 09:31:16] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:62356 - - [14/Sep/2015 09:31:16] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62356 - - [14/Sep/2015 09:31:16] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62356 - - [14/Sep/2015 09:31:16] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:62356 - - [14/Sep/2015 09:31:16] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 139, in POST
+    u_reg=corrige_int(u_reg)
+  File "bin/app.py", line 55, in corrige_int
+    nr=int(str_n)
+ValueError: invalid literal for int() with base 10: ''
+
+193.136.46.104:62377 - - [14/Sep/2015 09:33:14] "HTTP/1.1 POST /" - 500 Internal Server Error
+193.136.46.104:62378 - - [14/Sep/2015 09:33:14] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:62378 - - [14/Sep/2015 09:33:14] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:62378 - - [14/Sep/2015 09:33:14] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62378 - - [14/Sep/2015 09:33:14] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62378 - - [14/Sep/2015 09:33:14] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:62378 - - [14/Sep/2015 09:33:14] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:62381 - - [14/Sep/2015 09:39:51] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:62381 - - [14/Sep/2015 09:39:51] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:62381 - - [14/Sep/2015 09:39:51] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62381 - - [14/Sep/2015 09:39:51] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62381 - - [14/Sep/2015 09:39:51] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:62381 - - [14/Sep/2015 09:39:52] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+193.136.46.104:62386 - - [14/Sep/2015 09:40:02] "HTTP/1.1 POST /" - 200 OK
+193.136.46.104:62387 - - [14/Sep/2015 09:40:02] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:62387 - - [14/Sep/2015 09:40:02] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:62387 - - [14/Sep/2015 09:40:02] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62387 - - [14/Sep/2015 09:40:02] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62387 - - [14/Sep/2015 09:40:02] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:62387 - - [14/Sep/2015 09:40:02] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:62399 - - [14/Sep/2015 09:42:19] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:62399 - - [14/Sep/2015 09:42:19] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:62399 - - [14/Sep/2015 09:42:19] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62399 - - [14/Sep/2015 09:42:19] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62399 - - [14/Sep/2015 09:42:19] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:62399 - - [14/Sep/2015 09:42:19] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:62403 - - [14/Sep/2015 09:42:21] "HTTP/1.1 GET /l2" - 200 OK
+193.136.46.104:62404 - - [14/Sep/2015 09:43:56] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:62404 - - [14/Sep/2015 09:44:02] "HTTP/1.1 GET /l2" - 200 OK
+193.136.46.104:62405 - - [14/Sep/2015 09:44:18] "HTTP/1.1 POST /l2" - 200 OK
+193.136.46.104:62405 - - [14/Sep/2015 09:44:26] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:62407 - - [14/Sep/2015 09:44:38] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:62407 - - [14/Sep/2015 09:44:43] "HTTP/1.1 GET /l2" - 200 OK
+193.136.46.104:62408 - - [14/Sep/2015 09:44:56] "HTTP/1.1 POST /l2" - 200 OK
+193.136.46.104:62416 - - [14/Sep/2015 09:45:17] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:62416 - - [14/Sep/2015 09:45:17] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:62416 - - [14/Sep/2015 09:45:17] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:62416 - - [14/Sep/2015 09:45:17] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63154 - - [14/Sep/2015 16:13:56] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:63195 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:63196 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:63196 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:63196 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63196 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63196 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:63196 - - [14/Sep/2015 16:14:07] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:63201 - - [14/Sep/2015 16:17:15] "HTTP/1.1 POST /" - 200 OK
+193.136.46.104:63202 - - [14/Sep/2015 16:17:15] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:63202 - - [14/Sep/2015 16:17:15] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:63202 - - [14/Sep/2015 16:17:15] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63202 - - [14/Sep/2015 16:17:15] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63202 - - [14/Sep/2015 16:17:15] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:63202 - - [14/Sep/2015 16:17:15] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:56980 - - [14/Sep/2015 17:51:22] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56980 - - [14/Sep/2015 17:51:22] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:56980 - - [14/Sep/2015 17:51:29] "HTTP/1.1 GET /l01b" - 404 Not Found
+193.136.44.30:56992 - - [14/Sep/2015 17:51:39] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:65313 - - [14/Sep/2015 17:53:06] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.46.104:63408 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:63409 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:63409 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:63409 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63409 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63409 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:63409 - - [14/Sep/2015 17:56:03] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:63410 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:63411 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:32] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:63410 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /" - 200 OK
+193.136.46.104:63411 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+193.136.46.104:63411 - - [14/Sep/2015 17:56:37] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.104:63410 - - [14/Sep/2015 17:56:46] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.104:63410 - - [14/Sep/2015 17:56:46] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.46.104:63420 - - [14/Sep/2015 17:57:00] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+193.136.46.104:63420 - - [14/Sep/2015 17:57:00] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+193.136.46.104:63420 - - [14/Sep/2015 17:57:00] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63420 - - [14/Sep/2015 17:57:01] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+193.136.46.104:63422 - - [14/Sep/2015 17:57:04] "HTTP/1.1 GET /l2" - 200 OK
+193.136.46.104:63424 - - [14/Sep/2015 17:57:18] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:56460 - - [16/Sep/2015 10:06:10] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56460 - - [16/Sep/2015 10:06:10] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:56460 - - [16/Sep/2015 10:06:10] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:56460 - - [16/Sep/2015 10:06:14] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56460 - - [16/Sep/2015 10:06:17] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:56460 - - [16/Sep/2015 10:06:18] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:56460 - - [16/Sep/2015 10:06:22] "HTTP/1.1 GET /l2" - 200 OK
+http://0.0.0.0:36802/
+Traceback (most recent call last):
+  File "bin/app.py", line 248, in <module>
+    app.run()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 310, in run
+    return wsgi.runwsgi(self.wsgifunc(*middleware))
+  File "/usr/lib/python2.6/site-packages/web/wsgi.py", line 54, in runwsgi
+    return httpserver.runsimple(func, validip(listget(sys.argv, 1, '')))
+  File "/usr/lib/python2.6/site-packages/web/httpserver.py", line 148, in runsimple
+    server.start()
+  File "/usr/lib/python2.6/site-packages/web/wsgiserver/__init__.py", line 1753, in start
+    raise socket.error(msg)
+socket.error: No socket could be created
+193.136.44.30:56493 - - [16/Sep/2015 10:13:09] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56493 - - [16/Sep/2015 10:13:12] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:56493 - - [16/Sep/2015 10:13:12] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:56493 - - [16/Sep/2015 10:13:17] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:56493 - - [16/Sep/2015 10:13:20] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:56503 - - [16/Sep/2015 10:14:19] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56503 - - [16/Sep/2015 10:14:22] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56527 - - [16/Sep/2015 10:15:10] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56527 - - [16/Sep/2015 10:15:12] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:56527 - - [16/Sep/2015 10:15:12] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:56527 - - [16/Sep/2015 10:15:17] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:57885 - - [16/Sep/2015 14:12:20] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:55323 - - [16/Sep/2015 14:22:22] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55330 - - [16/Sep/2015 14:23:13] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55330 - - [16/Sep/2015 14:23:20] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55330 - - [16/Sep/2015 14:23:21] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:55330 - - [16/Sep/2015 14:23:21] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:55330 - - [16/Sep/2015 14:23:25] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:60470 - - [16/Sep/2015 14:28:43] "HTTP/1.1 GET /l2" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 208, in GET
+    return render.l(unicode(footer))
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+TypeError: __template__() takes exactly 2 arguments (1 given)
+
+193.136.44.30:60471 - - [16/Sep/2015 14:28:56] "HTTP/1.1 GET /l" - 500 Internal Server Error
+193.136.44.30:60472 - - [16/Sep/2015 14:30:10] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:10] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:14] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:21] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:24] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:33] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:35] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:35] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:60472 - - [16/Sep/2015 14:30:38] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:60473 - - [16/Sep/2015 14:31:16] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:60474 - - [16/Sep/2015 14:31:36] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:60476 - - [16/Sep/2015 14:32:09] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:60476 - - [16/Sep/2015 14:32:14] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:60485 - - [16/Sep/2015 14:33:50] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:60485 - - [16/Sep/2015 14:33:50] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+46.50.6.245:17347 - - [16/Sep/2015 14:34:08] "HTTP/1.1 GET /" - 200 OK
+46.50.6.245:17223 - - [16/Sep/2015 14:34:09] "HTTP/1.1 GET /apple-touch-icon-120x120-precomposed.png" - 404 Not Found
+46.50.6.245:17223 - - [16/Sep/2015 14:34:09] "HTTP/1.1 GET /apple-touch-icon-120x120.png" - 404 Not Found
+46.50.6.245:17223 - - [16/Sep/2015 14:34:09] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.6.245:17223 - - [16/Sep/2015 14:34:09] "HTTP/1.1 GET /apple-touch-icon.png" - 404 Not Found
+46.50.6.245:17223 - - [16/Sep/2015 14:34:09] "HTTP/1.1 GET /apple-touch-icon-precomposed.png" - 404 Not Found
+46.50.6.245:17223 - - [16/Sep/2015 14:34:09] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+46.50.6.245:17225 - - [16/Sep/2015 14:34:15] "HTTP/1.1 GET /" - 200 OK
+46.50.6.245:17226 - - [16/Sep/2015 14:34:28] "HTTP/1.1 GET /l2" - 200 OK
+46.50.6.245:17286 - - [16/Sep/2015 14:34:30] "HTTP/1.1 GET /l" - 200 OK
+46.50.6.245:17286 - - [16/Sep/2015 14:34:30] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:60779 - - [16/Sep/2015 15:00:59] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:60779 - - [16/Sep/2015 15:01:03] "HTTP/1.1 GET /login" - 404 Not Found
+http://0.0.0.0:36802/
+Traceback (most recent call last):
+  File "bin/app.py", line 313, in <module>
+    app.run()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 310, in run
+    return wsgi.runwsgi(self.wsgifunc(*middleware))
+  File "/usr/lib/python2.6/site-packages/web/wsgi.py", line 54, in runwsgi
+    return httpserver.runsimple(func, validip(listget(sys.argv, 1, '')))
+  File "/usr/lib/python2.6/site-packages/web/httpserver.py", line 148, in runsimple
+    server.start()
+  File "/usr/lib/python2.6/site-packages/web/wsgiserver/__init__.py", line 1753, in start
+    raise socket.error(msg)
+socket.error: No socket could be created
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 108, in GET
+    f = render.footer(session)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+TypeError: __template__() takes no arguments (1 given)
+
+193.136.44.30:60783 - - [16/Sep/2015 15:02:03] "HTTP/1.1 GET /login" - 500 Internal Server Error
+193.136.44.30:60789 - - [16/Sep/2015 15:02:54] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:60789 - - [16/Sep/2015 15:03:01] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:60789 - - [16/Sep/2015 15:03:07] "HTTP/1.1 GET /logout" - 405 Method Not Allowed
+193.136.44.30:60819 - - [16/Sep/2015 15:05:05] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:60819 - - [16/Sep/2015 15:05:07] "HTTP/1.1 GET /logout" - 405 Method Not Allowed
+193.136.44.30:60819 - - [16/Sep/2015 15:05:10] "HTTP/1.1 GET /login" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 113, in POST
+    vars=locals())[0]
+  File "/usr/lib/python2.6/site-packages/web/utils.py", line 678, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+
+193.136.44.30:60819 - - [16/Sep/2015 15:05:13] "HTTP/1.1 POST /login" - 500 Internal Server Error
+193.136.44.30:60829 - - [16/Sep/2015 15:07:38] "HTTP/1.1 GET /login" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 112, in POST
+    ident = db.select('users', where='user=$name', vars=locals())[0]
+  File "/usr/lib/python2.6/site-packages/web/utils.py", line 678, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+
+193.136.44.30:60829 - - [16/Sep/2015 15:07:42] "HTTP/1.1 POST /login" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 114, in POST
+    return render.login_failed(unicode(h), unicode(f), web.input().user)
+UnboundLocalError: local variable 'h' referenced before assignment
+
+193.136.44.30:62668 - - [16/Sep/2015 15:09:19] "HTTP/1.1 POST /login" - 500 Internal Server Error
+193.136.44.30:62670 - - [16/Sep/2015 15:10:00] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:62719 - - [16/Sep/2015 15:11:50] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:62719 - - [16/Sep/2015 15:11:52] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:62719 - - [16/Sep/2015 15:11:55] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:62719 - - [16/Sep/2015 15:12:00] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:56135 - - [16/Sep/2015 15:26:51] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56135 - - [16/Sep/2015 15:26:52] "HTTP/1.1 GET /login" - 200 OK
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 126, in POST
+    return render.index(unicode(h), unicode(f))
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+TypeError: __template__() takes exactly 7 arguments (2 given)
+
+193.136.44.30:56137 - - [16/Sep/2015 15:27:09] "HTTP/1.1 POST /login" - 500 Internal Server Error
+193.136.44.30:56169 - - [16/Sep/2015 15:32:25] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:56169 - - [16/Sep/2015 15:32:27] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:56169 - - [16/Sep/2015 15:32:29] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:56169 - - [16/Sep/2015 15:32:35] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:56192 - - [16/Sep/2015 15:35:25] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:56192 - - [16/Sep/2015 15:35:25] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50689 - - [16/Sep/2015 15:41:18] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50689 - - [16/Sep/2015 15:41:22] "HTTP/1.1 GET /logout" - 405 Method Not Allowed
+193.136.44.30:50689 - - [16/Sep/2015 15:41:30] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50689 - - [16/Sep/2015 15:41:31] "HTTP/1.1 GET /logout" - 405 Method Not Allowed
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 236, in process
+    return self.handle()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 227, in handle
+    return self._delegate(fn, self.fvars, args)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 409, in _delegate
+    return handle_class(cls)
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 384, in handle_class
+    return tocall(*args)
+  File "bin/app.py", line 107, in GET
+    h = render.header()
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 879, in __call__
+    return BaseTemplate.__call__(self, *a, **kw)
+  File "/usr/lib/python2.6/site-packages/web/template.py", line 806, in __call__
+    return self.t(*a, **kw)
+TypeError: __template__() takes exactly 1 argument (0 given)
+
+193.136.44.30:50704 - - [16/Sep/2015 15:42:36] "HTTP/1.1 GET /login" - 500 Internal Server Error
+http://0.0.0.0:36802/
+Traceback (most recent call last):
+  File "bin/app.py", line 329, in <module>
+    app.run()
+  File "/usr/lib/python2.6/site-packages/web/application.py", line 310, in run
+    return wsgi.runwsgi(self.wsgifunc(*middleware))
+  File "/usr/lib/python2.6/site-packages/web/wsgi.py", line 54, in runwsgi
+    return httpserver.runsimple(func, validip(listget(sys.argv, 1, '')))
+  File "/usr/lib/python2.6/site-packages/web/httpserver.py", line 148, in runsimple
+    server.start()
+  File "/usr/lib/python2.6/site-packages/web/wsgiserver/__init__.py", line 1753, in start
+    raise socket.error(msg)
+socket.error: No socket could be created
+193.136.44.30:50716 - - [16/Sep/2015 15:43:29] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50716 - - [16/Sep/2015 15:43:33] "HTTP/1.1 GET /logout" - 405 Method Not Allowed
+193.136.44.30:50716 - - [16/Sep/2015 15:43:35] "HTTP/1.1 GET /logout" - 405 Method Not Allowed
+193.136.44.30:50718 - - [16/Sep/2015 15:44:07] "HTTP/1.1 GET /logout" - 200 OK
+193.136.44.30:50718 - - [16/Sep/2015 15:44:14] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:45:52] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:45:55] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:45:56] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:45:57] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:45:58] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:00] "HTTP/1.1 GET /logout" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:02] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:04] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:07] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:09] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:10] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50726 - - [16/Sep/2015 15:46:13] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50806 - - [16/Sep/2015 15:51:02] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50806 - - [16/Sep/2015 15:51:03] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:50806 - - [16/Sep/2015 15:51:06] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50810 - - [16/Sep/2015 15:51:26] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50810 - - [16/Sep/2015 15:51:26] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50810 - - [16/Sep/2015 15:51:35] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50810 - - [16/Sep/2015 15:51:39] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50810 - - [16/Sep/2015 15:51:40] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50810 - - [16/Sep/2015 15:51:44] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:00] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:06] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:08] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:08] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:13] "HTTP/1.1 GET /logout" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:16] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:18] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:19] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:20] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:22] "HTTP/1.1 GET /logout" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:27] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:28] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:29] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:29] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50827 - - [16/Sep/2015 15:54:30] "HTTP/1.1 GET /logout" - 200 OK
+193.136.44.30:50951 - - [16/Sep/2015 15:59:20] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50951 - - [16/Sep/2015 15:59:22] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50951 - - [16/Sep/2015 15:59:23] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50951 - - [16/Sep/2015 15:59:23] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50951 - - [16/Sep/2015 15:59:25] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:50951 - - [16/Sep/2015 15:59:28] "HTTP/1.1 GET /" - 200 OK
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+/usr/lib/python2.6/site-packages/web/db.py:587: Warning: Data truncated for column 'auth' at row 1
+  out = cur.execute(sql_query.query(paramstyle), sql_query.values())
+193.136.44.30:50953 - - [16/Sep/2015 15:59:43] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:50961 - - [16/Sep/2015 16:00:12] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50961 - - [16/Sep/2015 16:00:13] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50961 - - [16/Sep/2015 16:00:17] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50971 - - [16/Sep/2015 16:01:20] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50971 - - [16/Sep/2015 16:01:28] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:50971 - - [16/Sep/2015 16:01:31] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50971 - - [16/Sep/2015 16:01:33] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:50974 - - [16/Sep/2015 16:02:01] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50974 - - [16/Sep/2015 16:02:03] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50974 - - [16/Sep/2015 16:02:03] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50977 - - [16/Sep/2015 16:02:18] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50977 - - [16/Sep/2015 16:02:24] "HTTP/1.1 POST /l2" - 200 OK
+46.50.6.245:17288 - - [16/Sep/2015 16:03:31] "HTTP/1.1 GET /" - 200 OK
+46.50.6.245:17223 - - [16/Sep/2015 16:03:34] "HTTP/1.1 GET /login" - 200 OK
+46.50.6.245:17289 - - [16/Sep/2015 16:03:58] "HTTP/1.1 POST /login" - 200 OK
+46.50.6.245:17160 - - [16/Sep/2015 16:04:02] "HTTP/1.1 GET /" - 200 OK
+46.50.6.245:17161 - - [16/Sep/2015 16:04:11] "HTTP/1.1 GET /l2" - 200 OK
+46.50.6.245:17351 - - [16/Sep/2015 16:04:15] "HTTP/1.1 GET /l" - 200 OK
+46.50.6.245:17351 - - [16/Sep/2015 16:04:15] "HTTP/1.1 GET /l1b" - 200 OK

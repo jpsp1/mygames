@@ -1,0 +1,24 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>My games - records</title>
+	<style>p{font-size:100%;}</style>
+    </head>
+<body>
+
+<table id="menu">
+        <tr>
+            <td>
+<form action="/login" method="GET"><input type="submit" value="LOGIN"></form>
+	    </td>
+            <td>
+<form action="/addGame" method="GET"><input type="submit" value="GAMES"></form>
+	    </td>
+            <td>
+<form action="/players" method="GET"><input type="submit" value="PLAYERS"></form>
+	    </td>
+        </tr>
+</table>
+
+<hr>
+ 

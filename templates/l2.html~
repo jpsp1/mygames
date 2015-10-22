@@ -1,0 +1,20 @@
+$def with (header,footer)
+$:header
+
+<form action="/l2" method="POST">
+
+<ul>
+	<li>auth: <input name="auth" size="6" type="text" />
+	</li>
+
+	<li>advers&aacute;rio registado (número): <input name="u_reg" size="15" type="text" />
+
+	</li>
+	
+<li><input type="submit" value="Submeter"></li>
+</ul>
+
+</form>
+
+$:footer
+

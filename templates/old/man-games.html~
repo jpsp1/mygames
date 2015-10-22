@@ -1,0 +1,7 @@
+$def with (header,footer)
+
+$:header
+<em>Welcome page</em>
+<p>
+
+$:footer

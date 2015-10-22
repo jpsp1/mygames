@@ -1,0 +1,12 @@
+$def with (header,footer,results)
+
+$:header
+
+<ul>
+$for i in results:
+   <li>$i.id;$i.nome ($i.origem)</li>
+</ul>
+
+$:footer
+
+

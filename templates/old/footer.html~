@@ -1,0 +1,5 @@
+$def with (session)
+<hr>
+User=$session.user (loggedin=$session.login)
+</body>
+</html>

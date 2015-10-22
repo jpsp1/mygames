@@ -1,0 +1,315 @@
+$def with (header,footer)
+
+$:header
+<h3>Manage games</h3>
+
+
+<ul>
+<li>To add a game fill out the form and press submit at the end of the page</li>
+<li>See also other options</li>
+</ul>
+
+<table border="0">
+  <tbody>
+    <tr>
+      <td>Player:</td>
+      <td>
+<select name="player_id">
+<option value="1">manuel</option>
+<option value="2">joaquim</option>
+</select></td>
+      </tr>
+    <tr>
+      <td>Date:</td>
+      <td>
+<select name="date_y">
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+</select> 
+/ 
+<select name="date_m">
+<option value="1">jan</option>
+<option value="2">feb</option>
+<option value="3">mar</option>
+<option value="4">apr</option>
+<option value="5">mai</option>
+<option value="6">jun</option>
+<option value="7">jul</option>
+<option value="8">aug</option>
+<option value="9">sep</option>
+<option value="10">oct</option>
+<option value="11">nov</option>
+<option value="12">dez</option>
+</select> 
+/ 
+<select name="date_d">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select></td>
+      </tr>
+    <tr>
+      <td>Time:</td>
+      <td>
+<select name="time_h">
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+</select> H : 
+<select name="time_m">
+<option value="00">00</option>
+<option value="15">15</option>
+<option value="30">30</option>
+<option value="45">45</option>
+</select>
+</td>
+      </tr>
+    <tr>
+      <td>Situation:</td>
+      <td><select name="situation">
+<option value="1">training</option>
+<option value="2">competitive</option>
+<option value="3">competitive - ladder</option>
+<option value="4">competitive - tournament</option>
+<option value="5">competitive - MBP</option>
+</select></td>
+      </tr>
+    <tr>
+
+    <tr>
+      <td>Result:</td>
+      <td><select name="result">
+<option value="1">won</option>
+<option value="2">lost</option>
+<option value="3">noShow - opponent</option>
+<option value="4">noShow - me</option>
+<option value="3">quited - me</option>
+<option value="4">quited - opponent</option>
+<option value="5">did&#39;t finish</option>
+</select></td>
+      </tr>
+
+      <td>My result:</td>
+      <td><select name="1set-me"><option value="1">1</option><option value="2">2</option><option value="15">15</option></select>/<select name="1set-me"><option value="1">1</option><option value="2">2</option><option value="15">15</option></select>; <select name="1set-me"><option value="1">1</option><option value="2">2</option><option value="15">15</option></select>/<select name="1set-me"><option value="1">1</option><option value="2">2</option><option value="15">15</option></select>;<select name="1set-me"><option value="1">1</option><option value="2">2</option><option value="15">15</option></select>/<select name="1set-me"><option value="1">1</option><option value="2">2</option><option value="15">15</option></select></td>
+      </tr>
+    <tr>
+      <td>Comments - 1 st:</td>
+      <td><textarea name="comments_1st"></textarea></td>
+      </tr>
+    <tr>
+      <td>Comments - 2 st:</td>
+      <td><textarea name="2nd-set"></textarea></td>
+      </tr>
+    <tr>
+      <td>Comments - 3 st:</td>
+      <td><textarea name="3rd-set"></textarea></td>
+      </tr>
+    <tr>
+      <td>Location:</td>
+      <td><select name="location"><option value="1">CTPLumiar</option><option value="2">Jamor</option></select></td>
+      </tr>
+    <tr>
+      <td>Price:</td>
+      <td><input name="price" type="text" /></td>
+      </tr>
+    </tbody>
+</table>
+
+<p>&nbsp;</p>
+
+
+<p>Player notes for this day (optional):</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+  <tbody>
+    <tr>
+      <td>Type:</td>
+      <td><select name="player_type"><option value="1">Baseline</option><option value="2">Pusher</option><option selected="selected" value=""></option><option value="4">Junk-Ball</option><option value="3">Counter Puncher</option><option value="5">Attack the Net</option><option value="6">All Court</option></select></td>
+      </tr>
+    <tr>
+      <td>Level:</td>
+      <td><select name="ntrp"><option value="2">NTRP 2</option><option value="3">NTRP 3</option><option value="4">NTRP 4</option><option value="5">NTRP 5</option><option selected="selected" value=""></option></select></td>
+      </tr>
+    <tr>
+      <td>Strengths:</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Weaknesses:</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Patterns:</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Favorite shots under certain situations:</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Year birth:</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Physical condition:</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Pace</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Depth</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Angles</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Touch</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Handedness</td>
+      <td><select name="handed"><option value="1">Right-Handed</option><option value="2">Left-Handed</option></select></td>
+      </tr>
+    <tr>
+      <td>Forehand</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Backhand</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Serve</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Voleis</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>Overhead:</td>
+      <td>&nbsp;</td>
+      </tr>
+    </tbody>
+</table>
+
+<p>Other operations:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+  <tbody>
+    <tr>
+      <td>Peevious games&nbsp; (short):</td>
+      <td><select name="player"><option value="1">manuel</option><option value="2">joaquim</option></select></td>
+      </tr>
+    <tr>
+      <td>Peevious games&nbsp; (long):</td>
+      <td><select name="player"><option value="1">manuel</option><option value="2">joaquim</option></select></td>
+      </tr>
+    <tr>
+      <td>Delete record number:</td>
+      <td><input name="del_record" type="text" value="del_record" /></td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      </tr>
+    </tbody>
+</table>
+
+
+
+
+$:footer

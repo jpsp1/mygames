@@ -1,0 +1,8 @@
+import os
+pid=os.getpid()
+fo = open("/usr/share/myWebApps/resultados/pid", "w")
+fo.write("teste")
+fo.write(str(pid))
+fo.close
+
+

@@ -1,0 +1,6 @@
+$def with (header,footer)
+
+$:header
+<em>Add game</em>
+<p>Add game
+$:footer

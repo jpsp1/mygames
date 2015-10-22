@@ -1,0 +1,284 @@
+import web
+import hashlib
+import re
+import sys
+from datetime import date
+
+urls = (
+   '/', 'Index',
+)
+
+passwdSalt='jpspPasswdSalt2693214585'
+
+# "sessions doesn't work in debug mode because it interfere with reloading"
+web.config.debug = False
+#web.config.debug = True
+
+
+app = web.application(urls, globals())
+
+db = web.database(dbn='mysql', 
+                  user='resultados', 
+                  pw='resultados-historicos',
+                  db='resultados', 
+                  host='localhost')
+
+render = web.template.render('templates/')
+
+
+#---------------------------------- database
+# uses web-sessions DB
+# some relevant doc:
+# http://webpy.org/cookbook/select
+class DB:
+    def playerAdd(self,player_name,player_age,player_lic):
+        player_nameLC=player_name.lower()
+        listRes=db.select('player', where='nameLC=$player_nameLC',\
+                              vars=locals())
+        if len(listRes)>0:
+            return -1
+
+        player_age=int(player_age)
+        if player_age>90 or player_age<10:
+            aproxBirthYear=-1
+        else:
+            aproxBirthYear=date.today().year-player_age
+
+        sequence_id = db.insert('player', \
+                                    name=player_name,\
+                                    nameLC=player_nameLC,\
+                                    aproxBirthYear=aproxBirthYear,\
+                                insDate=web.SQLLiteral("NOW()"))
+        return sequence_id
+
+    def playerList(self,player_name,player_age,player_lic):
+        player_nameLC=player_name.lower()
+        listRes=db.select('player', where='nameLC=$player_nameLC',\
+                              vars=locals())
+        if len(listRes)>0:
+            return -1
+
+        if player_age is not None:
+            player_age=int(player_age)
+            if player_age>90 or player_age<10:
+                aproxBirthYear=-1
+            else:
+                aproxBirthYear=date.today().year-player_age
+        else:
+            aproxBirthYear=-2
+
+        sequence_id = db.insert('player', \
+                                    name=player_name,\
+                                    nameLC=player_nameLC,\
+                                    aproxBirthYear=aproxBirthYear,\
+                                    playerState=1,\
+                                insDate=web.SQLLiteral("NOW()"))
+        return sequence_id
+
+# creates object
+appDB=DB()
+
+
+
+#--------------------------------------------
+def logged():
+    if session.login==1:
+        return True
+    else:
+        return False
+
+def okInputStr(str):
+    p=re.compile('^[a-zA-Z0-9]*$')
+    if len(str) > 1000:
+        return False
+    return p.match(str)
+
+def okInputStrList(lista):
+    for l in lista:
+        if len(l)>0:
+            if not okInputStr(l):
+                return False
+    return True
+
+def okInputNumber(str):
+    p=re.compile('^[0-9]*$')
+    if len(str) > 1000:
+        return False
+    return p.match(str)
+
+def corrige_int(str_n):
+    if not okInputNumber(str_n):
+        return 0;
+    nr=int(str_n)
+    if nr < 0:
+        return 0;
+    if nr > 2050:
+        return 0;
+    return nr
+
+class Login(object):
+    def GET(self):
+        h = render.header() 
+        f = render.footer(session) 
+        return render.login2(unicode(h), unicode(f))
+    def POST(self):
+        aname, passwd = web.input().user, web.input().passwd
+        ident = db.select('users', where='user=$name', \
+                          vars=locals())[0]
+        passwd_enc=hashlib.sha1(passwdSalt+passwd).hexdigest()
+        print name,passwd,passwd_enc
+        if  passwd_enc == ident['pass']:
+            session.login = 1
+            session.user=web.input().user
+            h = render.header() 
+            f = render.footer(session) 
+            return render.index(unicode(h), unicode(f))
+        else:
+            h = render.header() 
+            f = render.footer(session) 
+            return render.login_failed(unicode(h), unicode(f), web.input().user)
+
+class Logout(object):
+    def POST(self):
+        session.login = 0
+        session.user='anonymous'
+        h = render.header() 
+        f = render.footer(session) 
+        return render.index(unicode(h), unicode(f))
+
+class MGaddGame(object):
+    def GET(self):
+        if logged():
+            h = render.header() 
+            h2= render.MGmenu()
+            f = render.footer(session) 
+            return render.MGaddGame(unicode(h), unicode(h2), unicode(f))
+        else:
+            h = render.header() 
+            f = render.footer(session) 
+            return render.noLogin(unicode(h), unicode(f))
+
+class MPaddPlayer(object):
+    def GET(self):
+        if logged():
+            h = render.header() 
+            h2= render.MPmenu()
+            f = render.footer(session) 
+            return render.MPaddPlayer(unicode(h), unicode(h2), unicode(f))
+        else:
+            h = render.header() 
+            f = render.footer(session) 
+            return render.noLogin(unicode(h), unicode(f))
+    def POST(self):
+        if logged():
+            h = render.header() 
+            h2= render.MPmenu()
+            f = render.footer(session) 
+            player_name,player_age,player_lic=\
+                web.input().player_name, \
+                web.input().player_age,\
+                web.input().player_lic
+            if not okInputStr(player_name):
+                return render.syntaxErrorInput(unicode(h), unicode(f),player_name)
+            if not okInputNumber(player_age):
+                return render.syntaxErrorInput(unicode(h), unicode(f),player_age)
+            if not okInputStr(player_lic):
+                return render.syntaxErrorInput(unicode(h), unicode(f),player_lic)
+            res=appDB.playerAdd(player_name,player_age,player_lic)
+            if res == -1:
+                return render.errorPage(unicode(h), unicode(f),\
+                   "player \"" + player_name + "\" already exists!")
+            elif res>0:
+                return render.MPaddPlayerResult(unicode(h), unicode(h2), \
+                                              unicode(f),player_name,res)
+        else:
+            h = render.header() 
+            f = render.footer(session) 
+            return render.noLogin(unicode(h), unicode(f))
+
+class Index(object):
+    def GET(self):
+        return render.index()
+    def POST(self):
+        auth=web.input().auth
+        u_reg=web.input().u_reg
+        u_nreg=web.input().u_nreg
+        l_reg=web.input().l_reg
+        l_nreg=web.input().l_nreg
+        data_dia=web.input().data_dia
+        data_mes=web.input().data_mes
+        data_ano=web.input().data_ano
+        hora_hora=web.input().hora_hora
+        hora_minuto=web.input().hora_minuto
+        resultado=web.input().resultado
+        Set01_eu=web.input().Set01_eu
+        Set01_adv=web.input().Set01_adv
+        Set02_eu=web.input().Set02_eu
+        Set02_adv=web.input().Set02_adv
+        Set03_eu=web.input().Set03_eu
+        Set03_adv=web.input().Set03_adv
+        res_desc=web.input().res_desc
+        vars=[
+            auth,
+            u_reg,
+            u_nreg,
+            l_reg,
+            l_nreg,
+            data_dia,
+            data_mes,
+            data_ano,
+            hora_hora,
+            hora_minuto,
+            resultado,
+            Set01_eu,
+            Set01_adv,
+            Set02_eu,
+            Set02_adv,
+            Set03_eu,
+            Set03_adv,
+            res_desc,
+            ]
+        if not okInputStrList(vars):
+            return -1
+        if auth != "36801":
+            return -2
+
+        u_reg=corrige_int(u_reg)
+        l_reg=corrige_int(l_reg)
+        data_dia=corrige_int(data_dia)
+        data_mes=corrige_int(data_mes)
+        data_ano=corrige_int(data_ano)
+        hora_hora=corrige_int(hora_hora)
+        hora_minuto=corrige_int(hora_minuto)
+        resultado=corrige_int(resultado)
+        Set01_eu=corrige_int(Set01_eu)
+        Set01_adv=corrige_int(Set01_adv)
+        Set02_eu=corrige_int(Set02_eu)
+        Set02_adv=corrige_int(Set02_adv)
+        Set03_eu=corrige_int(Set03_eu)
+        Set03_adv=corrige_int(Set03_adv)
+
+        sequence_id = db.insert('game', 
+                                auth=auth,
+                                u_reg=u_reg,
+                                u_nreg=u_nreg,
+                                l_reg=l_reg,
+                                l_nreg=l_nreg,
+                                data_dia=data_dia,
+                                data_mes=data_mes,
+                                data_ano=data_ano,
+                                hora_hora=hora_hora,
+                                hora_minuto=hora_minuto,
+                                resultado=resultado,
+                                Set01_eu=Set01_eu,
+                                Set01_adv=Set01_adv,
+                                Set02_eu=Set02_eu,
+                                Set02_adv=Set02_adv,
+                                Set03_eu=Set03_eu,
+                                Set03_adv=Set03_adv,
+                                res_desc=res_desc,
+                                )
+        return render.index_res(auth)
+if __name__ == "__main__":
+    app.run()
+

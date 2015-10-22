@@ -1,0 +1,19 @@
+$def with (footer,results)
+
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>p{font-size:100%;}</style>
+<title>l2</title>
+</head>
+<body>
+
+<ul>
+$for i in results:
+   <li>$i.id;$i.nome ($i.origem)</li>
+</ul>
+
+$:footer
+
+

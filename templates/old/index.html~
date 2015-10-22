@@ -1,0 +1,6 @@
+$def with (header,footer)
+
+$:header
+<em>Welcome page</em>
+App: My games - records
+$:footer

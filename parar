@@ -1,0 +1,3 @@
+
+kill -TERM `ps ax|grep app.py|grep 36801|grep -v grep|awk '{print $1}'`
+

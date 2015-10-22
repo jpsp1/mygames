@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <style>p{font-size:100%;}</style>
+<title>JOgadores</title>
+</head>
+<body>
+
+<p>listagem jogadores set-2015</p>
+<pre>
+id,nome,origem,nasc_ano
+9,Alexandre MEndes,NULL,NULL
+10,Andre Cochel,NULL,NULL
+11,Andrea,NULL,NULL
+12,António Baião,NULL,NULL
+13,António Cebola,NULL,NULL
+14,António Corte Real,NULL,NULL
+15,Carlos,NULL,NULL
+16,Carlos bettencur,NULL,NULL
+17,Carlos Borges Sousa,NULL,NULL
+18,Carlos Silva,NULL,NULL
+19,Dinis,NULL,NULL
+20,Énio Pestana,NULL,NULL
+21,Fábio Vitório,NULL,NULL
+22,Feliz Santos,NULL,NULL
+23,Fernando Filipe,NULL,NULL
+24,Francisco Silva,NULL,NULL
+25,Francisco Vinagre,NULL,NULL
+26,Frank Bacour,NULL,NULL
+27,Helder Santos,NULL,NULL
+28,Henrique Pinto,NULL,NULL
+29,Hugo,raquect de Alvalade,NULL
+30,Hugo Palma,NULL,NULL
+2,Ilidio Cruz,NULL,NULL
+31,Isidro Correia,NULL,NULL
+32,João Antunes,NULL,NULL
+33,João Faria,NULL,NULL
+34,João Gomes,NULL,NULL
+3,João Martins,NULL,NULL
+35,João Martins,NULL,NULL
+36,João Menino,NULL,NULL
+37,João Pedro Borges,NULL,1986
+38,João Pereira,NULL,NULL
+39,João Pimenta,NULL,NULL
+40,João Ramires,NULL,NULL
+41,João Ramos Silva,MBP,NULL
+42,João Silva,FCCN,NULL
+43,Jorge Felix,NULL,NULL
+44,José Mascarenhas,NULL,NULL
+45,Leonel Martinho,NULL,NULL
+46,Leopoldo,NULL,NULL
+47,Luís Correia,NULL,NULL
+4,Luís Ferreira,NULL,NULL
+48,Luís Grazina,NULL,NULL
+49,Luís Henriques,NULL,NULL
+50,Luís Rodrigues,CTPL,NULL
+51,Luís Rodrigues,NULL,NULL
+52,Luísa Gouveia,NULL,1962
+53,Manuel Mauricio,NULL,NULL
+94,MArco Miguel,NULL,NULL
+54,Miguel Andrade,FCCN,NULL
+56,Miguel Morais,NULL,NULL
+57,Miguel Rego Mello,NULL,NULL
+93,NULL,NULL,NULL
+59,Nuno Borges,MBP,1977
+60,Nuno Cordeiro ,MBP,NULL
+70,Nuno Duarte,MBP,NULL
+71,Nuno Encarnação,NULL,NULL
+72,Nuno Golveia ,MBP,NULL
+6,Nuno Kreye,NULL,NULL
+73,Nuno Vassallo Kreye,NULL,NULL
+74,Paula Zoio,NULL,1961
+75,Paulino Ferreira,NULL,NULL
+76,Paulo Nogueira Santos,NULL,NULL
+77,Paulo Pinto da Luz,NULL,NULL
+78,Pedro Belo,NULL,NULL
+79,Pedro Folgado,NULL,NULL
+80,Pedro Menezes,MBP,NULL
+81,Pedro Vila REal,NULL,NULL
+82,ricardo marques,NULL,NULL
+83,Ricardo Medeiros,NULL,NULL
+84,ricardo pizzaro,NULL,NULL
+7,Rogério Luís,NULL,NULL
+85,Rui Azeredo,NULL,NULL
+86,Rui Cardal,NULL,NULL
+87,Rui Florêncio,NULL,NULL
+1,Rui Fonseca Pedro,NULL,NULL
+88,Rui Meireles,NULL,NULL
+89,Rui Rito,NULL,NULL
+90,Rui Sanchez Silva,NULL,NULL
+91,Telmo Nobrega,NULL,NULL
+92,Tiago Sousa Dias,NULL,NULL
+</pre>
+
+<hr>
+[ <a href=/l>Listagem01</a> | <a href=/l2>Listagem02</a> ]
+</body>
+</html>
+
+

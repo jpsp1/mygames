@@ -1,0 +1,11 @@
+#!/usr/bin/python                                                               
+# -*- coding: utf-8 -*-                                                         
+
+import os
+
+pid=os.getpid()
+fo = open("/usr/share/myWebApps/resultados/pid", "w")
+fo.write("testeaaaaaaaaaaaaaaaaaaaa")
+fo.write(str(pid))
+fo.close
+

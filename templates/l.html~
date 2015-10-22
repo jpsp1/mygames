@@ -1,0 +1,13 @@
+$def with (footer)
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0; url=l1b" />
+<title>r</title>
+</head>
+<body>
+r
+$:footer
+
+
+
