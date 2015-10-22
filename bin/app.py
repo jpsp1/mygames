@@ -8,6 +8,8 @@ import hashlib
 import re
 import datetime
 
+config_db='/home/ec2-user/mygames-local/db.py'
+
 urls = (
    '/', 'Index',   
    '/l', 'Listagem01',  
@@ -24,11 +26,12 @@ web.config.debug = False
 
 app = web.application(urls, globals())
 
-db = web.database(dbn='mysql', 
-                  user='resultados', 
-                  pw='resultados-historicos',
-                  db='resultados', 
-                  host='localhost')
+execfile(config_db)
+db = web.database(dbn=config_dbn,
+                  user=config_user,
+                  pw=config_pw,
+                  db=config_db,
+                  host=config_host)
 
 #----------
 # inicializacao sessoes
