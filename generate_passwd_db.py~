@@ -1,9 +1,0 @@
-import hashlib
-
-passwdSalt='jpspPasswdSalt2693214585'
-passwd="ola"
-passwd_enc=hashlib.sha1(passwdSalt+passwd).hexdigest()
-print passwd,passwd_enc
-
-
-

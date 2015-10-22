@@ -1029,3 +1029,54 @@ socket.error: No socket could be created
 193.136.44.30:61942 - - [22/Oct/2015 09:57:05] "HTTP/1.1 POST /" - 200 OK
 193.136.44.30:61942 - - [22/Oct/2015 09:57:14] "HTTP/1.1 GET /l2" - 200 OK
 193.136.44.30:61942 - - [22/Oct/2015 09:57:17] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:50570 - - [22/Oct/2015 15:17:34] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50570 - - [22/Oct/2015 15:17:34] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:50570 - - [22/Oct/2015 15:17:34] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:50570 - - [22/Oct/2015 15:17:42] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50570 - - [22/Oct/2015 15:17:43] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50570 - - [22/Oct/2015 15:17:43] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50570 - - [22/Oct/2015 15:17:44] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:11] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:16] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:16] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:24] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:28] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:28] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:31] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:35] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:37] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:37] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:45] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:45] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:48] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:51] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:56] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50587 - - [22/Oct/2015 15:20:58] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:50599 - - [22/Oct/2015 15:21:36] "HTTP/1.1 GET /" - 200 OK
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Data truncated for column 'auth' at row 1
+  out = cur.execute(query, params)
+193.136.44.30:50613 - - [22/Oct/2015 15:24:19] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:50613 - - [22/Oct/2015 15:24:22] "HTTP/1.1 GET /" - 200 OK
+193.136.46.83:62668 - - [22/Oct/2015 15:25:27] "HTTP/1.1 GET /" - 200 OK
+193.136.46.83:62669 - - [22/Oct/2015 15:25:28] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.46.83:62674 - - [22/Oct/2015 15:25:45] "HTTP/1.1 GET /login" - 200 OK
+193.136.46.83:62675 - - [22/Oct/2015 15:26:07] "HTTP/1.1 POST /login" - 200 OK
+193.136.46.83:62676 - - [22/Oct/2015 15:26:21] "HTTP/1.1 GET /login" - 200 OK
+193.136.46.83:62678 - - [22/Oct/2015 15:26:46] "HTTP/1.1 POST /login" - 200 OK
+193.136.46.83:62678 - - [22/Oct/2015 15:26:51] "HTTP/1.1 GET /l" - 200 OK
+193.136.46.83:62678 - - [22/Oct/2015 15:26:51] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.46.83:62678 - - [22/Oct/2015 15:26:57] "HTTP/1.1 POST /login" - 200 OK
+193.136.46.83:62678 - - [22/Oct/2015 15:27:02] "HTTP/1.1 GET /logout" - 200 OK
+193.136.46.83:62678 - - [22/Oct/2015 15:27:05] "HTTP/1.1 GET /login" - 200 OK
+193.136.46.83:62679 - - [22/Oct/2015 15:27:25] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:50811 - - [22/Oct/2015 15:49:41] "HTTP/1.1 GET /l2" - 200 OK
