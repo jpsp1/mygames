@@ -8,7 +8,9 @@ import hashlib
 import re
 import datetime
 
-config_db='/home/ec2-user/mygames-local/db.py'
+config='/home/ec2-user/mygames/local/config.py'
+
+execfile(config)
 
 urls = (
    '/', 'Index',   
@@ -23,10 +25,8 @@ urls = (
 web.config.debug = False
 #web.config.debug = True
 
-
 app = web.application(urls, globals())
 
-execfile(config_db)
 db = web.database(dbn=config_dbn,
                   user=config_user,
                   pw=config_pw,
