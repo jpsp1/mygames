@@ -1080,3 +1080,143 @@ socket.error: No socket could be created
 193.136.46.83:62678 - - [22/Oct/2015 15:27:05] "HTTP/1.1 GET /login" - 200 OK
 193.136.46.83:62679 - - [22/Oct/2015 15:27:25] "HTTP/1.1 POST /login" - 200 OK
 193.136.44.30:50811 - - [22/Oct/2015 15:49:41] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:50826 - - [22/Oct/2015 15:51:32] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:50826 - - [22/Oct/2015 15:51:32] "HTTP/1.1 GET /l1b" - 200 OK
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/web/application.py", line 237, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/site-packages/web/session.py", line 84, in _processor
+    self._cleanup()
+  File "/usr/local/lib/python2.7/site-packages/web/session.py", line 172, in _cleanup
+    self.store.cleanup(timeout)
+  File "/usr/local/lib/python2.7/site-packages/web/session.py", line 319, in cleanup
+    self.db.delete(self.table, where="$last_allowed_time > atime", vars=locals())
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 906, in delete
+    db_cursor = self._db_cursor()
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 566, in _db_cursor
+    return self.ctx.db.cursor()
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 507, in _getctx
+    self._load_context(self._ctx)
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 518, in _load_context
+    ctx.db = self._connect(self.keywords)
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 546, in _connect
+    return self.db_module.connect(**keywords)
+  File "/usr/local/lib64/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib64/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)")
+
+193.136.44.30:59192 - - [23/Oct/2015 08:42:37] "HTTP/1.1 GET /" - 500 Internal Server Error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/web/application.py", line 237, in process
+    return p(lambda: process(processors))
+  File "/usr/local/lib/python2.7/site-packages/web/session.py", line 84, in _processor
+    self._cleanup()
+  File "/usr/local/lib/python2.7/site-packages/web/session.py", line 172, in _cleanup
+    self.store.cleanup(timeout)
+  File "/usr/local/lib/python2.7/site-packages/web/session.py", line 319, in cleanup
+    self.db.delete(self.table, where="$last_allowed_time > atime", vars=locals())
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 906, in delete
+    db_cursor = self._db_cursor()
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 566, in _db_cursor
+    return self.ctx.db.cursor()
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 507, in _getctx
+    self._load_context(self._ctx)
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 518, in _load_context
+    ctx.db = self._connect(self.keywords)
+  File "/usr/local/lib/python2.7/site-packages/web/db.py", line 546, in _connect
+    return self.db_module.connect(**keywords)
+  File "/usr/local/lib64/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib64/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)")
+
+193.136.44.30:59192 - - [23/Oct/2015 08:42:37] "HTTP/1.1 GET /favicon.ico" - 500 Internal Server Error
+193.136.44.30:59193 - - [23/Oct/2015 08:43:19] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:59202 - - [23/Oct/2015 08:45:34] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:59202 - - [23/Oct/2015 08:45:35] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:59202 - - [23/Oct/2015 08:45:36] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:59202 - - [23/Oct/2015 08:45:38] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:59202 - - [23/Oct/2015 08:45:38] "HTTP/1.1 GET /l1b" - 200 OK
+46.50.22.234:7304 - - [24/Oct/2015 15:21:55] "HTTP/1.1 GET /login" - 200 OK
+46.50.22.234:7305 - - [24/Oct/2015 15:21:55] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+46.50.22.234:7304 - - [24/Oct/2015 15:21:57] "HTTP/1.1 POST /login" - 200 OK
+46.50.22.234:7304 - - [24/Oct/2015 15:22:01] "HTTP/1.1 GET /" - 200 OK
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Data truncated for column 'auth' at row 1
+  out = cur.execute(query, params)
+46.50.22.234:7296 - - [24/Oct/2015 15:24:40] "HTTP/1.1 POST /" - 200 OK
+91.236.75.4:40532 - - [26/Oct/2015 09:04:58] "HTTP/1.1 GET reader/about/" - 404 Not Found
+185.25.151.159:47434 - - [26/Oct/2015 09:22:37] "HTTP/1.1 GET testproxy.php" - 404 Not Found
+193.136.44.30:61112 - - [09/Nov/2015 09:34:16] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:61112 - - [09/Nov/2015 09:34:17] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:61112 - - [09/Nov/2015 09:34:17] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:61112 - - [09/Nov/2015 09:34:19] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:61112 - - [09/Nov/2015 09:34:20] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:61112 - - [09/Nov/2015 09:34:21] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:61112 - - [09/Nov/2015 09:34:24] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:61112 - - [09/Nov/2015 09:34:24] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:61112 - - [09/Nov/2015 09:34:31] "HTTP/1.1 GET /" - 200 OK
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Data truncated for column 'auth' at row 1
+  out = cur.execute(query, params)
+193.136.44.30:61121 - - [09/Nov/2015 09:36:21] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:61121 - - [09/Nov/2015 09:36:25] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:61121 - - [09/Nov/2015 09:36:25] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:61122 - - [09/Nov/2015 09:36:46] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:61122 - - [09/Nov/2015 09:36:49] "HTTP/1.1 POST /l2" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:10] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:11] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:55586 - - [09/Nov/2015 14:31:13] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:14] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:16] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:18] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:19] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:55586 - - [09/Nov/2015 14:31:26] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55609 - - [09/Nov/2015 14:34:01] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:55610 - - [09/Nov/2015 14:34:19] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:55818 - - [11/Nov/2015 17:57:40] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55818 - - [11/Nov/2015 17:57:40] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:55818 - - [11/Nov/2015 17:57:40] "HTTP/1.1 GET /favicon.ico" - 404 Not Found
+193.136.44.30:55818 - - [11/Nov/2015 17:57:42] "HTTP/1.1 GET /login" - 200 OK
+193.136.44.30:55818 - - [11/Nov/2015 17:57:44] "HTTP/1.1 POST /login" - 200 OK
+193.136.44.30:55818 - - [11/Nov/2015 17:57:45] "HTTP/1.1 GET /l" - 200 OK
+193.136.44.30:55818 - - [11/Nov/2015 17:57:46] "HTTP/1.1 GET /l1b" - 200 OK
+193.136.44.30:55818 - - [11/Nov/2015 17:57:52] "HTTP/1.1 GET /" - 200 OK
+193.136.44.30:55853 - - [11/Nov/2015 18:02:40] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:55855 - - [11/Nov/2015 18:02:59] "HTTP/1.1 POST /" - 200 OK
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_Data' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_resultado' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_local' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_analise_adv' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Field 'h_tatica' doesn't have a default value
+  out = cur.execute(query, params)
+/usr/local/lib/python2.7/site-packages/web/db.py:587: Warning: Data truncated for column 'auth' at row 1
+  out = cur.execute(query, params)
+193.136.44.30:55858 - - [11/Nov/2015 18:03:34] "HTTP/1.1 POST /" - 200 OK
+193.136.44.30:55860 - - [11/Nov/2015 18:03:50] "HTTP/1.1 GET /l2" - 200 OK
+193.136.44.30:55860 - - [11/Nov/2015 18:03:52] "HTTP/1.1 POST /l2" - 200 OK
